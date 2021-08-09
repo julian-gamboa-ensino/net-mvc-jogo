@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Jogo Labirinto (2021)";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Julian Gamboa</h1>    
+</div>
+
+@using (Html.BeginForm ("Upload",  
+                        "Home",  
+                        FormMethod.Post,  
+                        new { enctype = "multipart/form-data" }))  
+{                    
+    <label for="file">Enviar "arquivo entrada" (entrada-labirinto2.txt, entrada-labirinto3.txt, entrada-labirinto.txt) </label> 
+    <br> 
+    <input type="file" name="arquivo" id="file"/>
+    <br>  
+    <input type="submit" value="Enviar"/>  
+    <br>
+    @ViewBag.Message  
+}
+

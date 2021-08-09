@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Saida";
+}
+
+<p>Após processar o arquivo <b>"@ViewData["arquivoEntrada"]"</b> temos como saída:</p>
+<br>
+
+@Html.Raw(@ViewData["caminhoSAIDA"])
+
